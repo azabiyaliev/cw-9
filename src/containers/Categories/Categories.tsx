@@ -40,9 +40,10 @@ const Categories = () => {
   };
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
-
   const categoriesShow: ICategory[] = Object.values(useAppSelector(categories));
   const pickCategories = useAppSelector(pickedCategory);
+
+  console.log(pickCategories);
 
   useEffect(() => {
     dispatch(fetchGetCategories());
@@ -106,7 +107,7 @@ const Categories = () => {
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            Add New Category
+            {pickCategories ? "Edit Category" : "Add New Category"}
           </Typography>
           <form onSubmit={submitForm}>
             <Box
@@ -154,7 +155,7 @@ const Categories = () => {
                   color="inherit"
                   variant="outlined"
                 >
-                  Save
+                  {pickCategories ? "Edit" : "Save"}
                 </Button>
                 <Button
                   type="button"

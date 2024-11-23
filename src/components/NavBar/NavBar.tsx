@@ -1,4 +1,10 @@
-import { AppBar, Box, Button, Toolbar, Typography } from '@mui/material';
+import {
+  AppBar,
+  Box,
+  Button,
+  Toolbar,
+  Typography
+} from '@mui/material';
 import { NavLink, useLocation } from 'react-router-dom';
 
 const NavBar = () => {
@@ -34,5 +40,5 @@ const NavBar = () => {
     </>
   );
 };
-
+//type, name, onClose, onChange, obj, open
 export default NavBar;

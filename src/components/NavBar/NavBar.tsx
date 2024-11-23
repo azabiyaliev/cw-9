@@ -1,12 +1,7 @@
 import { AppBar, Box, Button, Toolbar, Typography } from '@mui/material';
 import { NavLink, useLocation } from 'react-router-dom';
-import React from 'react';
 
-interface Props {
-  modal: React.MouseEventHandler<HTMLButtonElement>;
-}
-
-const NavBar: React.FC<Props> = ({modal}) => {
+const NavBar = () => {
 
   const location = useLocation();
   console.log(location.pathname);
@@ -29,7 +24,7 @@ const NavBar: React.FC<Props> = ({modal}) => {
               <Button color="inherit" to="/categories" component={NavLink}>
                 Categories
               </Button>
-              <Button type="button" color="inherit" onClick={modal}>
+              <Button type="button" color="inherit">
                 Add
               </Button>
             </Box>
